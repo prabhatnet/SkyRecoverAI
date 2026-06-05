@@ -1,0 +1,17 @@
+[
+  {
+    "flight_id": "SR101",
+    "origin": "JFK",
+    "destination": "LAX",
+    "status": "cancelled",
+    "disruption_type": "cancellation"
+  },
+  {
+    "flight_id": "SR202",
+    "origin": "SFO",
+    "destination": "ORD",
+    "status": "delayed",
+    "delay_minutes": 130,
+    "disruption_type": "weather"
+  }
+]

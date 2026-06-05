@@ -1,0 +1,5 @@
+[
+  {"option_id": "OPT1", "flight_id": "SR301", "arrival_delta_minutes": 95},
+  {"option_id": "OPT2", "flight_id": "SR401", "arrival_delta_minutes": 140},
+  {"option_id": "OPT3", "flight_id": "SR501", "arrival_delta_minutes": 220}
+]

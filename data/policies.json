@@ -1,0 +1,10 @@
+{
+  "compensation": {
+    "meal_voucher_usd": 25,
+    "hotel_voucher_usd": 150,
+    "delay_threshold_minutes": 120
+  },
+  "payment_recovery": {
+    "default_mode": "travel_credit"
+  }
+}

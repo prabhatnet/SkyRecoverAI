@@ -1,0 +1,4 @@
+[
+  {"passenger_id": "P1001", "name": "Alex Kim", "loyalty_tier": "Gold", "flight_id": "SR101"},
+  {"passenger_id": "P1002", "name": "Jordan Lee", "loyalty_tier": "None", "flight_id": "SR202"}
+]
