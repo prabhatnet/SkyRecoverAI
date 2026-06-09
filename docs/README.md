@@ -12,3 +12,8 @@ Holds architecture decisions, design references, and implementation guidance.
 - Add ADR catalog and release architecture snapshots.
 - Introduce API contracts and sequence diagrams per feature.
 - Maintain migration playbooks for enterprise rollout.
+
+## Key Documents
+- [MVP Architecture](architecture.md)
+- [Repository Structure Guide](repository-structure.md)
+- [Agent Architecture](agents-architecture.md)
