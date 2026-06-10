@@ -1,0 +1,47 @@
+[
+  {
+    "passenger_id": "PAX-000001",
+    "first_name": "Emma",
+    "last_name": "Rodriguez",
+    "full_name": "Emma Rodriguez",
+    "date_of_birth": "1987-04-14",
+    "loyalty_tier": "Gold",
+    "home_airport": "JFK",
+    "preferred_language": "en-US",
+    "special_service_requests": ["VGML"],
+    "contact": {
+      "email": "emma.rodriguez@example.com",
+      "phone": "+12125550101"
+    }
+  },
+  {
+    "passenger_id": "PAX-000002",
+    "first_name": "Noah",
+    "last_name": "Kim",
+    "full_name": "Noah Kim",
+    "date_of_birth": "1993-11-03",
+    "loyalty_tier": "None",
+    "home_airport": "LHR",
+    "preferred_language": "en-GB",
+    "special_service_requests": [],
+    "contact": {
+      "email": "noah.kim@example.com",
+      "phone": "+447700900222"
+    }
+  },
+  {
+    "passenger_id": "PAX-000003",
+    "first_name": "Yuki",
+    "last_name": "Tanaka",
+    "full_name": "Yuki Tanaka",
+    "date_of_birth": "1979-09-27",
+    "loyalty_tier": "Platinum",
+    "home_airport": "HND",
+    "preferred_language": "ja-JP",
+    "special_service_requests": ["WCHR"],
+    "contact": {
+      "email": "yuki.tanaka@example.com",
+      "phone": "+81355501234"
+    }
+  }
+]

@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://skyrecoverai.local/schemas/flights.schema.json",
+  "title": "SkyRecoverAI Flights Dataset",
+  "description": "Flight schedule and operations feed for simulations. Production target is exactly 100 flights.",
+  "type": "array",
+  "minItems": 100,
+  "maxItems": 100,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "flight_id",
+      "flight_number",
+      "operating_carrier",
+      "departure_airport",
+      "arrival_airport",
+      "scheduled_departure_utc",
+      "scheduled_arrival_utc",
+      "aircraft_type",
+      "status",
+      "ticket_classes_available",
+      "connection_flights"
+    ],
+    "properties": {
+      "flight_id": {
+        "type": "string",
+        "pattern": "^FL-[0-9]{5}$"
+      },
+      "flight_number": {
+        "type": "string",
+        "pattern": "^SR[0-9]{3,4}$"
+      },
+      "operating_carrier": {
+        "type": "string",
+        "const": "SkyRecover Air"
+      },
+      "marketing_carrier": {
+        "type": "string"
+      },
+      "departure_airport": {
+        "type": "string",
+        "pattern": "^[A-Z]{3}$"
+      },
+      "arrival_airport": {
+        "type": "string",
+        "pattern": "^[A-Z]{3}$"
+      },
+      "scheduled_departure_utc": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "scheduled_arrival_utc": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "aircraft_type": {
+        "type": "string",
+        "enum": [
+          "A320",
+          "A321",
+          "A330",
+          "B737-800",
+          "B737-MAX8",
+          "B787-9"
+        ]
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "scheduled",
+          "boarding",
+          "departed",
+          "delayed",
+          "canceled"
+        ]
+      },
+      "distance_km": {
+        "type": "integer",
+        "minimum": 100,
+        "maximum": 16000
+      },
+      "ticket_classes_available": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "string",
+          "enum": [
+            "Economy",
+            "Premium Economy",
+            "Business",
+            "First"
+          ]
+        },
+        "uniqueItems": true
+      },
+      "connection_flights": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "next_flight_id",
+            "min_connection_time_minutes"
+          ],
+          "properties": {
+            "next_flight_id": {
+              "type": "string",
+              "pattern": "^FL-[0-9]{5}$"
+            },
+            "min_connection_time_minutes": {
+              "type": "integer",
+              "minimum": 30,
+              "maximum": 240
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+[
+  {
+    "booking_id": "BKG-000001",
+    "pnr": "AB12CD",
+    "passenger_id": "PAX-000001",
+    "ticket_class": "Business",
+    "fare_basis": "JFLEX",
+    "booking_status": "Confirmed",
+    "flight_details": {
+      "primary_flight_id": "FL-10001",
+      "departure_airport": "JFK",
+      "arrival_airport": "LHR",
+      "departure_utc": "2026-06-12T12:30:00Z",
+      "arrival_utc": "2026-06-12T19:45:00Z"
+    },
+    "connection_flights": [
+      {
+        "flight_id": "FL-10077",
+        "connection_airport": "LHR",
+        "layover_minutes": 95
+      }
+    ],
+    "disruption_details": {
+      "is_disrupted": true,
+      "disruption_id": "DIS-000101",
+      "impact_type": "MissedConnection"
+    }
+  },
+  {
+    "booking_id": "BKG-000002",
+    "pnr": "EF34GH",
+    "passenger_id": "PAX-000002",
+    "ticket_class": "Economy",
+    "fare_basis": "YLEISURE",
+    "booking_status": "CheckedIn",
+    "flight_details": {
+      "primary_flight_id": "FL-10002",
+      "departure_airport": "LHR",
+      "arrival_airport": "CDG",
+      "departure_utc": "2026-06-12T21:15:00Z",
+      "arrival_utc": "2026-06-12T22:35:00Z"
+    },
+    "connection_flights": [],
+    "disruption_details": {
+      "is_disrupted": true,
+      "disruption_id": "DIS-000102",
+      "impact_type": "DepartureDelay"
+    }
+  },
+  {
+    "booking_id": "BKG-000003",
+    "pnr": "JK56LM",
+    "passenger_id": "PAX-000003",
+    "ticket_class": "Premium Economy",
+    "fare_basis": "WSEMI",
+    "booking_status": "Confirmed",
+    "flight_details": {
+      "primary_flight_id": "FL-10003",
+      "departure_airport": "DXB",
+      "arrival_airport": "SIN",
+      "departure_utc": "2026-06-12T09:10:00Z",
+      "arrival_utc": "2026-06-12T16:20:00Z"
+    },
+    "connection_flights": [
+      {
+        "flight_id": "FL-10055",
+        "connection_airport": "SIN",
+        "layover_minutes": 80
+      }
+    ],
+    "disruption_details": {
+      "is_disrupted": false,
+      "impact_type": "None"
+    }
+  }
+]

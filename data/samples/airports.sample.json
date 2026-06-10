@@ -1,0 +1,44 @@
+[
+  {
+    "airport_id": "APT-001",
+    "iata_code": "JFK",
+    "icao_code": "KJFK",
+    "name": "John F. Kennedy International Airport",
+    "city": "New York",
+    "country": "United States",
+    "timezone": "America/New_York",
+    "latitude": 40.6413,
+    "longitude": -73.7781,
+    "is_hub": true,
+    "terminals": 6,
+    "region": "NA"
+  },
+  {
+    "airport_id": "APT-002",
+    "iata_code": "LHR",
+    "icao_code": "EGLL",
+    "name": "Heathrow Airport",
+    "city": "London",
+    "country": "United Kingdom",
+    "timezone": "Europe/London",
+    "latitude": 51.47,
+    "longitude": -0.4543,
+    "is_hub": true,
+    "terminals": 4,
+    "region": "EU"
+  },
+  {
+    "airport_id": "APT-003",
+    "iata_code": "DXB",
+    "icao_code": "OMDB",
+    "name": "Dubai International Airport",
+    "city": "Dubai",
+    "country": "United Arab Emirates",
+    "timezone": "Asia/Dubai",
+    "latitude": 25.2532,
+    "longitude": 55.3657,
+    "is_hub": true,
+    "terminals": 3,
+    "region": "MEA"
+  }
+]

@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://skyrecoverai.local/schemas/passengers.schema.json",
+  "title": "SkyRecoverAI Passengers Dataset",
+  "description": "Passenger master data for disruption recovery simulations. Production target is exactly 500 passengers.",
+  "type": "array",
+  "minItems": 500,
+  "maxItems": 500,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "passenger_id",
+      "first_name",
+      "last_name",
+      "full_name",
+      "loyalty_tier",
+      "home_airport",
+      "preferred_language",
+      "contact"
+    ],
+    "properties": {
+      "passenger_id": {
+        "type": "string",
+        "pattern": "^PAX-[0-9]{6}$"
+      },
+      "first_name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "last_name": {
+        "type": "string",
+        "minLength": 1
+      },
+      "full_name": {
+        "type": "string",
+        "minLength": 3
+      },
+      "date_of_birth": {
+        "type": "string",
+        "format": "date"
+      },
+      "loyalty_tier": {
+        "type": "string",
+        "enum": [
+          "None",
+          "Silver",
+          "Gold",
+          "Platinum"
+        ]
+      },
+      "home_airport": {
+        "type": "string",
+        "pattern": "^[A-Z]{3}$"
+      },
+      "preferred_language": {
+        "type": "string",
+        "enum": [
+          "en-US",
+          "en-GB",
+          "es-ES",
+          "fr-FR",
+          "de-DE",
+          "ja-JP"
+        ]
+      },
+      "special_service_requests": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "WCHR",
+            "WCHS",
+            "UMNR",
+            "VGML",
+            "GFML",
+            "BLND",
+            "DEAF"
+          ]
+        },
+        "uniqueItems": true
+      },
+      "contact": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "email",
+          "phone"
+        ],
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "phone": {
+            "type": "string",
+            "pattern": "^\\+[0-9]{7,15}$"
+          }
+        }
+      }
+    }
+  }
+}

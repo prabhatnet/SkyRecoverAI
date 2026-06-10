@@ -18,3 +18,4 @@ Holds architecture decisions, design references, and implementation guidance.
 - [Repository Structure Guide](repository-structure.md)
 - [Agent Architecture](agents-architecture.md)
 - [LangGraph Workflow Design](langgraph-workflow-design.md)
+- [Sample Data Design](sample-data-design.md)

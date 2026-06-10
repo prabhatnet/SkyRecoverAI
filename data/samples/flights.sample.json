@@ -1,0 +1,57 @@
+[
+  {
+    "flight_id": "FL-10001",
+    "flight_number": "SR110",
+    "operating_carrier": "SkyRecover Air",
+    "marketing_carrier": "SkyRecover Air",
+    "departure_airport": "JFK",
+    "arrival_airport": "LHR",
+    "scheduled_departure_utc": "2026-06-12T12:30:00Z",
+    "scheduled_arrival_utc": "2026-06-12T19:45:00Z",
+    "aircraft_type": "B787-9",
+    "status": "scheduled",
+    "distance_km": 5540,
+    "ticket_classes_available": ["Economy", "Premium Economy", "Business"],
+    "connection_flights": [
+      {
+        "next_flight_id": "FL-10077",
+        "min_connection_time_minutes": 70
+      }
+    ]
+  },
+  {
+    "flight_id": "FL-10002",
+    "flight_number": "SR245",
+    "operating_carrier": "SkyRecover Air",
+    "marketing_carrier": "SkyRecover Air",
+    "departure_airport": "LHR",
+    "arrival_airport": "CDG",
+    "scheduled_departure_utc": "2026-06-12T21:15:00Z",
+    "scheduled_arrival_utc": "2026-06-12T22:35:00Z",
+    "aircraft_type": "A320",
+    "status": "delayed",
+    "distance_km": 344,
+    "ticket_classes_available": ["Economy", "Business"],
+    "connection_flights": []
+  },
+  {
+    "flight_id": "FL-10003",
+    "flight_number": "SR876",
+    "operating_carrier": "SkyRecover Air",
+    "marketing_carrier": "SkyRecover Air",
+    "departure_airport": "DXB",
+    "arrival_airport": "SIN",
+    "scheduled_departure_utc": "2026-06-12T09:10:00Z",
+    "scheduled_arrival_utc": "2026-06-12T16:20:00Z",
+    "aircraft_type": "A330",
+    "status": "scheduled",
+    "distance_km": 5840,
+    "ticket_classes_available": ["Economy", "Premium Economy", "Business", "First"],
+    "connection_flights": [
+      {
+        "next_flight_id": "FL-10055",
+        "min_connection_time_minutes": 95
+      }
+    ]
+  }
+]

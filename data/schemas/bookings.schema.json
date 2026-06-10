@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://skyrecoverai.local/schemas/bookings.schema.json",
+  "title": "SkyRecoverAI Bookings Dataset",
+  "description": "Passenger booking records for simulation. Production target is exactly 500 bookings.",
+  "type": "array",
+  "minItems": 500,
+  "maxItems": 500,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "booking_id",
+      "pnr",
+      "passenger_id",
+      "ticket_class",
+      "booking_status",
+      "flight_details",
+      "connection_flights"
+    ],
+    "properties": {
+      "booking_id": {
+        "type": "string",
+        "pattern": "^BKG-[0-9]{6}$"
+      },
+      "pnr": {
+        "type": "string",
+        "pattern": "^[A-Z0-9]{6}$"
+      },
+      "passenger_id": {
+        "type": "string",
+        "pattern": "^PAX-[0-9]{6}$"
+      },
+      "ticket_class": {
+        "type": "string",
+        "enum": [
+          "Economy",
+          "Premium Economy",
+          "Business",
+          "First"
+        ]
+      },
+      "fare_basis": {
+        "type": "string"
+      },
+      "booking_status": {
+        "type": "string",
+        "enum": [
+          "Confirmed",
+          "CheckedIn",
+          "NoShow",
+          "Canceled"
+        ]
+      },
+      "flight_details": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "primary_flight_id",
+          "departure_airport",
+          "arrival_airport",
+          "departure_utc",
+          "arrival_utc"
+        ],
+        "properties": {
+          "primary_flight_id": {
+            "type": "string",
+            "pattern": "^FL-[0-9]{5}$"
+          },
+          "departure_airport": {
+            "type": "string",
+            "pattern": "^[A-Z]{3}$"
+          },
+          "arrival_airport": {
+            "type": "string",
+            "pattern": "^[A-Z]{3}$"
+          },
+          "departure_utc": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "arrival_utc": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "connection_flights": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "flight_id",
+            "connection_airport",
+            "layover_minutes"
+          ],
+          "properties": {
+            "flight_id": {
+              "type": "string",
+              "pattern": "^FL-[0-9]{5}$"
+            },
+            "connection_airport": {
+              "type": "string",
+              "pattern": "^[A-Z]{3}$"
+            },
+            "layover_minutes": {
+              "type": "integer",
+              "minimum": 35,
+              "maximum": 360
+            }
+          }
+        }
+      },
+      "disruption_details": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "is_disrupted"
+        ],
+        "properties": {
+          "is_disrupted": {
+            "type": "boolean"
+          },
+          "disruption_id": {
+            "type": "string",
+            "pattern": "^DIS-[0-9]{6}$"
+          },
+          "impact_type": {
+            "type": "string",
+            "enum": [
+              "MissedConnection",
+              "DepartureDelay",
+              "Cancellation",
+              "None"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
