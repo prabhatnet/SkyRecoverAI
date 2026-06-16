@@ -8,6 +8,12 @@ Agentic AI portfolio project for airline disruption recovery using Python, Strea
 - LangGraph
 - OpenAI API
 
+## Quick Links
+
+- **[Try the Demo](https://huggingface.co/spaces)** — 3-minute walkthrough on Hugging Face Spaces
+- **[Demo Guide](docs/demo-guide.md)** — Script and talking points for hiring evaluators
+- **[Full Documentation](docs/README.md)** — Architecture, agents, workflow design, data contracts
+
 ## Project Layout
 - [agents](agents/README.md)
 - [workflows](workflows/README.md)
