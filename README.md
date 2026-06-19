@@ -1,3 +1,14 @@
+---
+title: SkyRecoverAI
+emoji: ✈️
+colorFrom: blue
+colorTo: indigo
+sdk: streamlit
+sdk_version: "1.58.0"
+app_file: streamlit_app.py
+pinned: false
+---
+
 # SkyRecoverAI
 
 Agentic AI portfolio project for airline disruption recovery using Python, Streamlit, and LangGraph.
