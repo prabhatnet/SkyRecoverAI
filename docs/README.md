@@ -19,4 +19,3 @@ Holds architecture decisions, design references, and implementation guidance.
 - [Agent Architecture](agents-architecture.md)
 - [LangGraph Workflow Design](langgraph-workflow-design.md)
 - [Sample Data Design](sample-data-design.md)
-- [Demo Guide for Hiring Evaluators](demo-guide.md)
